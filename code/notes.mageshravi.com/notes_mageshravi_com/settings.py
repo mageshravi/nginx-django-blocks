@@ -25,7 +25,9 @@ SECRET_KEY = 'a%+p&yo68fa8wt+ae9ffjcg@67ud-r%_l@s&^_^z9t(h(u_*wn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'notes.mageshravi.com',
+]
 
 
 # Application definition
@@ -119,3 +121,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+# static root aka public
+STATIC_ROOT = '/var/www/notes.mageshravi.com'
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
