@@ -1,17 +1,14 @@
 #!/bin/bash
 
-# creates the static root on PRODUCTION environment
+source ../colors.sh
 
-CYAN='\e[0;36m'
-NC='\e[0m'
-color=${CYAN}
-tag='INFO'
+# creates the static root on PRODUCTION environment
 
 STATIC_ROOT=/var/www/notes.mageshravi.com
 
-echo -e "${color}[${tag}] Creating static root at ${STATIC_ROOT}...${NC}"
+echo -e "Creating static root at ${txtcyn}${STATIC_ROOT}${txtrst}..."
 mkdir -p ${STATIC_ROOT}
 
-echo -e "${color}[${tag}] Setting permissions...${NC}"
+echo -e "Setting permissions...${NC}"
 chown -R root:webinative ${STATIC_ROOT}
 chmod -R 0775 ${STATIC_ROOT}
