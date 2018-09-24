@@ -1,0 +1,5 @@
+Django==2.1.1
+psycopg2==2.7.5
+pycodestyle==2.4.0
+pytz==2018.5
+uWSGI==2.0.17.1
