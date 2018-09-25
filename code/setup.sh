@@ -60,4 +60,16 @@ useradd --no-create-home portfolio_mravi_web
 echo -e "${txtblk}${bakcyn}Starting up nginx server...${txtrst}"
 service nginx start
 
+# run migrations
+echo -e "${txtblk}${bakpur}Running migrations${txtrst}"
+echo -e "${txtpur}mageshravi.com${txtrst}"
+cd /home/webinative/com.mageshravi.venv/bin/
+./python /home/webinative/www/mageshravi.com/manage.py migrate
+echo -e "${txtpur}notes.mageshravi.com${txtrst}"
+cd /home/webinative/com.mageshravi.notes.venv/bin/
+./python /home/webinative/www/notes.mageshravi.com/manage.py migrate
+echo -e "${txtpur}portfolio.mageshravi.com${txtrst}"
+cd /home/webinative/com.mageshravi.portfolio.venv/bin/
+./python /home/webinative/www/portfolio.mageshravi.com/manage.py migrate
+
 echo -e "${txtgrn}Done${txtrst}"

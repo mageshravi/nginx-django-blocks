@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'portfolio_mageshravi_com.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'portfolio_mravi_db',
+        'USER': 'portfolio_mravi_web',
+        'PASSWORD': 'portfolio_mravi_pwd',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
